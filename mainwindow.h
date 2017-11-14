@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDebug>
+#include <QTranslator>
 
 namespace Ui {
 class MainWindow;
@@ -15,8 +17,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_btnEnglish_clicked();
+    void on_btnGerman_clicked();
+    void on_btnPersian_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QTranslator translatorFa;
+    QTranslator translatorGe;
 };
 
 #endif // MAINWINDOW_H

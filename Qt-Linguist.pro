@@ -18,3 +18,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+#linguist
+TRANSLATIONS += translation_fa.ts
+TRANSLATIONS += translation_ge.ts
