@@ -17,6 +17,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+protected:
+    void changeEvent(QEvent*);
+
 private slots:
     void on_btnEnglish_clicked();
     void on_btnGerman_clicked();

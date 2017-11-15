@@ -26,7 +26,7 @@
     <message>
         <location filename="mainwindow.ui" line="66"/>
         <source>Welcome</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">خوش آمدید </translation>
     </message>
 </context>
 </TS>

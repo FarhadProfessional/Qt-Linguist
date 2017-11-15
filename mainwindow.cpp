@@ -7,15 +7,26 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    if(translatorFa.load("D:/Projects/Qt-Linguist/Qt-Linguist/translation_fa.qm"))
+    if(translatorFa.load("F:/Qt/Qt-Linguist/Qt-Linguist/translation_fa.qm"))
         qDebug()<<"successfully load translation_fa file.";
-    if(translatorGe.load("D:/Projects/Qt-Linguist/Qt-Linguist/translation_ge.qm"))
+
+    if(translatorGe.load("F:/Qt/Qt-Linguist/Qt-Linguist/translation_ge.qm"))
         qDebug()<<"successfully load translation_ge file.";
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::changeEvent(QEvent* event)
+{
+    if(event->type() == QEvent::LanguageChange)
+    {
+        ui->retranslateUi(this);
+    }
+
+    QWidget::changeEvent(event);
 }
 
 void MainWindow::on_btnEnglish_clicked()
